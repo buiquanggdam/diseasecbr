@@ -32,9 +32,9 @@ import javax.servlet.http.HttpServletResponse;
 public class DiseaseSearchResults extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
-    private final Project prj;
-    private final ICaseBase defaultCB;
-    private final Concept concept;
+    private Project prj;
+    private ICaseBase defaultCB;
+    private Concept concept;
     private int casesCount = 1;
 
     public DiseaseSearchResults() {
