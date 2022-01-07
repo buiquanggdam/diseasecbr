@@ -98,7 +98,7 @@ public class DiseaseSearchQuery extends HttpServlet{
                     + "                <input type='radio' name='age' value='AGE5'> All\n"
                     + "            </div>\n"
                     + "            <div class='inputfield'>\n"
-                    + "                <label for='speak'>Người bệnh đang ở độ tuổi nào?</label>\n"
+                    + "                <label for='speak'>Khả năng giao tiếp của người bệnh như thế nào?</label>\n"
                     + "                <input type='radio' name='speak' value='SPE1' checked='checked'> Khó nói\n"
                     + "                <input type='radio' name='speak' value='SPE2'> Lặp đi lặp lại các từ\n"
                     + "                <input type='radio' name='speak' value='SPE3'> Bình thường\n"

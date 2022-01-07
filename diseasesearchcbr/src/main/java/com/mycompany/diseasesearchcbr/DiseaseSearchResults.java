@@ -157,7 +157,7 @@ public class DiseaseSearchResults extends HttpServlet {
                 request.getParameter("age"),
                 request.getParameter("speak"));
 
-        // Ergebnisse ausgeben
+        // Kết quả đầu ra
         try ( PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -179,10 +179,9 @@ public class DiseaseSearchResults extends HttpServlet {
             }).forEach((singleResult) -> {
 
                 // Đầu ra kết quả là các bệnh
-                out.println("<div class = 'result' style = 'color:red;'>"
-                        + "<h2>"
+                out.println("<div class = 'result' style = 'line-height:5vh;'>"
                         + "Hệ thống cho rằng bệnh mà người bệnh mắc phải là: " + singleResult.get("Disease")
-                        + "</h2>" + "</div>");
+                        + "</div>");
 
                 // Đầu ra giới thiệu và lời khuyên
                 String tenbenh = singleResult.get("Disease");
