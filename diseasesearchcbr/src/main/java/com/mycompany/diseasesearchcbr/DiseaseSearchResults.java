@@ -179,13 +179,15 @@ public class DiseaseSearchResults extends HttpServlet {
             }).forEach((singleResult) -> {
 
                 // Đầu ra kết quả là các bệnh
-                out.println("<div class = 'result'>"
-                        + "Hệ thống cho rằng bệnh mà người bệnh mắc phải là: " + singleResult.get("Disease") + "</div>");
+                out.println("<div class = 'result' style = 'color:red;'>"
+                        + "<h2>"
+                        + "Hệ thống cho rằng bệnh mà người bệnh mắc phải là: " + singleResult.get("Disease")
+                        + "</h2>" + "</div>");
 
                 // Đầu ra giới thiệu và lời khuyên
                 String tenbenh = singleResult.get("Disease");
                 if (tenbenh.equals("Rối loạn vận động chậm phát (Tardive dyskinesia)")) {
-                    out.println("<div class='disease-des'>\n"
+                    out.println("<div id = 'description'>\n"
                             + "        Giới thiệu : Các rối loạn vận động chậm phát (TDs) là những chuyển động không \n"
                             + "        kiểm soát được của lưỡi môi, mặt, thân và các chi. Bệnh thường xảy ra ở những \n"
                             + "        người đang dùng các thuốc kháng acid dopaminergic dài hạn. Bệnh nhân tâm thần phân liệt,\n"
@@ -195,17 +197,17 @@ public class DiseaseSearchResults extends HttpServlet {
                             + "        đến bệnh nhân ở mọi lứa tuổi.\n"
                             + "    </div>\n"
                             + "    <div style=\"font-weight: bold;\">\n"
-                            + "        Lời khuyên : Người bệnh cần ăn uống điều độ, tăng cường tập thể dục, cố gắng không để bệnh ảnh hưởng đến cuộc sống thường ngày\n"
+                            + "        Lời khuyên: Người bệnh cần ăn uống điều độ, tăng cường tập thể dục, cố gắng không để bệnh ảnh hưởng đến cuộc sống thường ngày\n"
                             + "    </div>");
                 } else if (tenbenh.equals("Bình thường (không có bệnh)")) {
-                    out.println("<div class='disease-des'>\n"
+                    out.println("<div id = 'description'>\n"
                             + "        Giới thiệu : Sức khoẻ của bạn hoàn toàn bình thường\n"
                             + "    </div>\n"
                             + "    <div style=\"font-weight: bold;\">\n"
                             + "        Lời khuyên : Uống nhiều nước, hạn chế đồ ngọt, tăng cường tập thể dục\n"
                             + "    </div>");
                 } else if (tenbenh.equals("Co giật nửa mặt (Hemifacial Spasm)")) {
-                    out.println("<div class='disease-des'>\n"
+                    out.println("<div id = 'description'>\n"
                             + "        Co giật nửa mặt (Hemifacial Spasm) là một tình trạng co giật không tự ý, \n"
                             + "        ngắt quãng của các nhóm cơ chi phối dây thần kinh VII ở một bên mặt và không gây đau. \n"
                             + "        Bệnh tuy không gây đau và đe doạ tình mạng, nhưng gây ảnh hưởng rất lớn đến tâm lý và tinh thần của người bệnh, \n"
@@ -213,19 +215,19 @@ public class DiseaseSearchResults extends HttpServlet {
                             + "        Thường xuất hiện ở các bệnh nhân từ 40 tuổi đến 60 tuổi.\n"
                             + "    </div>\n"
                             + "    <div style=\"font-weight: bold;\">\n"
-                            + "        Lời khuyên : Người bệnh cần đi cấp cứu nếu người bệnh bị co giật quá 5 phút, tập thể dục thường xuyên, ăn uống điều độ.\n"
+                            + "        Lời khuyên: Người bệnh cần đi cấp cứu nếu người bệnh bị co giật quá 5 phút, tập thể dục thường xuyên, ăn uống điều độ.\n"
                             + "    </div>");
                 } else if (tenbenh.equals("Co thắt mí mắt (Blepharospasm)")) {
-                    out.println("<div class='disease-des'>\n"
+                    out.println("<div id = 'description'>\n"
                             + "        Co thắt mí mắt là một rối loạn thần kinh gây ra các cử động cơ không kiểm soát được \n"
                             + "        khiến mí mắt đóng lại hoặc khó mở (loạn trương lực cơ). Điều này có thể ảnh hưởng đến \n"
                             + "        khả năng nhìn của bệnh nhân. Độ tuổi trung bình của các bệnh nhân là từ 40 đến 60 tuổi\n"
                             + "    </div>\n"
                             + "    <div style=\"font-weight: bold;\">\n"
-                            + "        Lời khuyên : Người bệnh cần đi cấp cứu nếu mí mắt co giật quá 5 phút, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc.\n"
+                            + "        Lời khuyên: Người bệnh cần đi cấp cứu nếu mí mắt co giật quá 5 phút, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc.\n"
                             + "    </div>");
                 } else if (tenbenh.equals("Hội chứng Meige")) {
-                    out.println("<div class='disease-des'>\n"
+                    out.println("<div id = 'description'>\n"
                             + "        Hội chứng Meige là một dạng hiếm gặp của chứng loạn trương lực cơ, \n"
                             + "        một chứng rối loạn hệ thần kinh, trong đó một người thường xuyên bị co thắt \n"
                             + "        cưỡng bức của mắt, hàm, lưỡi và các cơ mặt dưới. Các cơn co thắt có thể giống như \n"
@@ -234,10 +236,10 @@ public class DiseaseSearchResults extends HttpServlet {
                             + "        Độ tuổi dễ mắc bệnh là từ 40 tuổi đến 60 tuổi.\n"
                             + "    </div>\n"
                             + "    <div style=\"font-weight: bold;\">\n"
-                            + "        Lời khuyên : Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu.\n"
+                            + "        Lời khuyên: Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu.\n"
                             + "    </div>");
                 } else if (tenbenh.equals("Hội trứng Tourette")) {
-                    out.println("<div class='disease-des'>\n"
+                    out.println("<div id = 'description'>\n"
                             + "        Hội trứng Tourette là một chứng rối loạn liên quan đến các chuyển động \n"
                             + "        lặp đi lặp lại hoặc âm thanh không mong muốn (tics) không thể dễ dàng kiểm soát được. \n"
                             + "        Ví dụ, bạn có thể liên tục chớp mắt, nhún vai hoặc thốt ra những âm thanh bất thường hoặc \n"
@@ -249,7 +251,7 @@ public class DiseaseSearchResults extends HttpServlet {
                             + "    </div>");
 
                 } else if (tenbenh.equals("Liệt dây thần kinh mặt Bell’s Palsy")) {
-                    out.println("div class='disease-des'>\n"
+                    out.println("div id = 'description'>\n"
                             + "        Liệt dây thần kinh mặt Bell's Palsy là một tình trạng gây ra tình trạng yếu tạm thời hoặc tê liệt các cơ ở mặt. \n"
                             + "        Nó có thể xảy ra khi dây thần kinh điều khiển cơ mặt của bạn bị viêm, sưng hoặc bị nén. Mọi độ tuổi đều có thể \n"
                             + "        mắc bệnh nên cần chú ý.\n"
@@ -258,7 +260,7 @@ public class DiseaseSearchResults extends HttpServlet {
                             + "        Lời khuyên: Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần.\n"
                             + "    </div>");
                 } else if (tenbenh.equals("Rối loạn TIC")) {
-                    out.println("<div class='disease-des'>\n"
+                    out.println("<div id = 'description'>\n"
                             + "        Rối loạn TIC là tình trạng co thắt không kiểm soát ở mặt như mắt nhấp nháy hoặc nhăn mũi. \n"
                             + "        Chúng cũng có thể được gọi là co thắt bắt chước. Mặc dù rối loạn TIC thường tự phát, \n"
                             + "        chúng có thể bị ức chế tạm thời. Rối loạn TIC có thể gặp phải ở mọi độ tuổi.\n"
@@ -267,7 +269,7 @@ public class DiseaseSearchResults extends HttpServlet {
                             + "        Lời khuyên: Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần.\n"
                             + "    </div>");
                 } else if (tenbenh.equals(" Đau dây thần kinh sinh ba")) {
-                    out.println("<div class='disease-des'>\n"
+                    out.println("<div id = 'description'>\n"
                             + "        Đau dây thần kinh sinh ba là một chứng bệnh hiếm gặp. Các sợi dây thần kinh cảm giác và \n"
                             + "        của dây thần kinh bị tổn thương nên khi một kích thích xuất hiện sẽ hình thành nên một xung động đau. \n"
                             + "        Những kích thích kéo dài, lặp lại nhiều lần tạo nên một vùng hưng phấn ở vỏ não làm người bệnh có cảm giác \n"
@@ -278,7 +280,7 @@ public class DiseaseSearchResults extends HttpServlet {
                             + "        Lời khuyên: Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần.\n"
                             + "    </div>");
                 } else if (tenbenh.equals("Đột quỵ")) {
-                    out.println("<div class='disease-des'>\n"
+                    out.println("<div id = 'description'>\n"
                             + "        Đột quỵ xảy ra khi nguồn cung cấp máu đến một phần não của bạn bị gián đoạn hoặc giảm, \n"
                             + "        ngăn cản các mô não nhận được oxy và chất dinh dưỡng. Tế bào não bắt đầu chết trong vài phút. \n"
                             + "        Đột quỵ là một trường hợp cấp cứu y tế và điều trị kịp thời là rất quan trọng. \n"

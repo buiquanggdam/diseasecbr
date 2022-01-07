@@ -179,11 +179,16 @@ h1+p.text {
     padding: 0;
 }
 
+#description {
+    font-size: 20px;
+}
 
 .result {
     margin-bottom: 20px;
     font-size: 24px;
+    color: red;
 }
+
 
 
 h2 {
