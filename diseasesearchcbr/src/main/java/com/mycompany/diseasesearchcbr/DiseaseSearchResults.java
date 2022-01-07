@@ -208,7 +208,7 @@ public class DiseaseSearchResults extends HttpServlet {
                 if (tenbenh.equals("Rối loạn vận động chậm phát (Tardive dyskinesia)")) {
                     out.println("<div><div>" + "Giới thiệu : Các rối loạn vận động chậm phát (TDs) là những chuyển động không kiểm soát được của lưỡi môi, mặt, thân và các chi. Bệnh thường xảy ra ở những người đang dùng các thuốc kháng acid dopaminergic dài hạn. Bệnh nhân tâm thần phân liệt, rối loạn tâm thần phân liệt, rối loạn lưỡng cực đã được điều trị bằng thuốc chống loạn thần trong thời gian dài thường mắt phải các chứng rối loạn vận động chậm, nhưng bệnh này có thể xuất hiện ở những bệnh nhân khác. Tình trạng sức khoẻ này rất phổ biến, bệnh có thể ảnh thướng đến bệnh nhân ở mọi lứa tuổi. "
                             + "  <strong>"
-                            + "<div><div>" + "Lời khuyên : Người bệnh cần ăn uống điều độ, tăng cường tập thể dục, cố gắng không để bệnh ảnh hưởng đến cuộc sống thường ngày" + "</div></div>"
+                            + "<div><div>" + "Lời khuyên : Người bệnh cần ăn uống điều độ, tăng cường tập thể dục, cố gắng không để bệnh ảnh hưởng đến cuộc sống thường ngày "+ "</div></div>"
                             + "</strong></div>" + "</div>");
                 } else if (tenbenh.equals("Bình thường (không có bệnh)")) {
                     out.println("<div><div>" + "Giới thiệu : Người bệnh bình thường) <strong>"
@@ -223,19 +223,31 @@ public class DiseaseSearchResults extends HttpServlet {
                     out.println("<div><div>" + "Giới thiệu : Co thắt mí mắt là một rối loạn thần kinh gây ra các cử động cơ không kiểm soát được khiến mí mắt đóng lại hoặc khó mở (loạn trương lực cơ). Điều này có thể ảnh hưởng đến khả năng nhìn của bệnh nhân. Độ tuổi trung bình của các bệnh nhân là từ 40 đến 60 tuổi "
                             + "<div><div>" + "Lời khuyên : Người bệnh cần đi cấp cứu nếu mí mắt co giật quá 5 phút, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc" + "</div></div>"
                             + "</strong></div>" + "</div>");
-                }else if (tenbenh.equals("Hội chứng Meige")) {
+                } else if (tenbenh.equals("Hội chứng Meige")) {
                     out.println("<div><div>" + "Giới thiệu : Hội chứng Meige là một dạng hiếm gặp của chứng loạn trương lực cơ, một chứng rối loạn hệ thần kinh, trong đó một người thường xuyên bị co thắt cưỡng bức của mắt, hàm, lưỡi và các cơ mặt dưới. Các cơn co thắt có thể giống như cảm giác bị đâm, tương tự như bị điện giật. Vì các cử động nằm ngoài khả năng kiểm soát của người bị bệnh, chúng có thể gây ra sự khó khăn trong các tình huống xã hội. Độ tuổi dễ mắc bệnh là từ 40 tuổi đến 60 tuổi "
                             + "<div><div>" + "Lời khuyên : Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu" + "</div></div>"
                             + "</strong></div>" + "</div>");
-                }else if (tenbenh.equals("Hội trứng Tourette")) {
+                } else if (tenbenh.equals("Hội trứng Tourette")) {
                     out.println("<div><div>" + "Giới thiệu : Hội trứng Tourette là một chứng rối loạn liên quan đến các chuyển động lặp đi lặp lại hoặc âm thanh không mong muốn (tics) không thể dễ dàng kiểm soát được. Ví dụ, bạn có thể liên tục chớp mắt, nhún vai hoặc thốt ra những âm thanh bất thường hoặc những từ xúc phạm. Tics thường xuất hiện trong độ tuổi từ 2 đến 15, với độ tuổi trung bình là khoảng 6 tuổi. Nam giới có nguy cơ mắc hội chứng Tourette cao hơn nữ giới khoảng 3-4 lần "
                             + "<div><div>" + "Lời khuyên : Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu" + "</div></div>"
                             + "</strong></div>" + "</div>");
-                }else if (tenbenh.equals("Liệt dây thần kinh mặt Bell’s Palsy")) {
-                    out.println("<div><div>" + "Giới thiệu : Liệt dây thần kinh mặt Bell’s Palsy là một chứng rối loạn liên quan đến các chuyển động lặp đi lặp lại hoặc âm thanh không mong muốn (tics) không thể dễ dàng kiểm soát được. Ví dụ, bạn có thể liên tục chớp mắt, nhún vai hoặc thốt ra những âm thanh bất thường hoặc những từ xúc phạm. Tics thường xuất hiện trong độ tuổi từ 2 đến 15, với độ tuổi trung bình là khoảng 6 tuổi. Nam giới có nguy cơ mắc hội chứng Tourette cao hơn nữ giới khoảng 3-4 lần "
-                            + "<div><div>" + "Lời khuyên : Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu" + "</div></div>"
+                } else if (tenbenh.equals("Liệt dây thần kinh mặt Bell’s Palsy")) {
+                    out.println("<div><div>" + "Giới thiệu : Liệt dây thần kinh mặt Bell’s Palsy là một tình trạng gây ra tình trạng yếu tạm thời hoặc tê liệt các cơ ở mặt. Nó có thể xảy ra khi dây thần kinh điều khiển cơ mặt của bạn bị viêm, sưng hoặc bị nén. Mọi độ tuổi đều có thể mắc bệnh nên cần chú ý. "
+                            + "<div><div>" + "Lời khuyên : Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần" + "</div></div>"
                             + "</strong></div>" + "</div>");
-                }
+                } else if (tenbenh.equals("Rối loạn TIC")) {
+                    out.println("<div><div>" + "Giới thiệu : Rối loạn TIC là tình trạng co thắt không kiểm soát ở mặt như mắt nhấp nháy hoặc nhăn mũi. Chúng cũng có thể được gọi là co thắt bắt chước. Mặc dù rối loạn TIC thường tự phát, chúng có thể bị ức chế tạm thời. Rối loạn TIC có thể gặp phải ở mọi độ tuổi  "
+                            + "<div><div>" + "Lời khuyên : Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần" + "</div></div>"
+                            + "</strong></div>" + "</div>");
+                } else if (tenbenh.equals(" Đau dây thần kinh sinh ba")) {
+                    out.println("<div><div>" + "Giới thiệu :  Đau dây thần kinh sinh ba là một chứng bệnh hiếm gặp. Các sợi dây thần kinh cảm giác và của dây thần kinh bị tổn thương nên khi một kích thích xuất hiện sẽ hình thành nên một xung động đau. Những kích thích kéo dài, lặp lại nhiều lần tạo nên một vùng hưng phấn ở vỏ não làm người bệnh có cảm giác đau thường xuyên, liên tục và dữ dội. Đau dây thần kinh sinh ba là một chứng bệnh mãn tính, kéo dài nhiều ngày đến nhiều tháng. Các bệnh nhân thường là nhóm người cao tuổi từ 60 tuổi trở lên.  "
+                            + "<div><div>" + "Lời khuyên : Người bệnh cần kiểm tra sức khỏe định kì, tới gặp bác sĩ để chọn thuốc phù hợp, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần" + "</div></div>"
+                            + "</strong></div>" + "</div>");
+                    }else if (tenbenh.equals("Đột quỵ")) {
+                    out.println("<div><div>" + "Giới thiệu : Đột quỵ xảy ra khi nguồn cung cấp máu đến một phần não của bạn bị gián đoạn hoặc giảm, ngăn cản các mô não nhận được oxy và chất dinh dưỡng. Tế bào não bắt đầu chết trong vài phút. Đột quỵ là một trường hợp cấp cứu y tế và điều trị kịp thời là rất quan trọng. Hành động sớm có thể làm giảm tổn thương não và các biến chứng khác. Bệnh đột quỵ xuất hiện ở mọi độ tuổi nên mọi người cần chú ý."
+                            + "<div><div>" + "Lời khuyên : Người bệnh cần kiểm tra sức khỏe định kì, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần" + "</div></div>"
+                            + "</strong></div>" + "</div>");
+                    }
             });
             out.println("</div>");
             out.println("</body>");
