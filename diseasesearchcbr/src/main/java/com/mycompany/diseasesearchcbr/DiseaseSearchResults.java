@@ -179,7 +179,7 @@ public class DiseaseSearchResults extends HttpServlet {
             }).forEach((singleResult) -> {
 
                 // Đầu ra kết quả là các bệnh
-                out.println("<div class = 'result'>"
+                out.println("<div class = 'result'style:'line-height:5vh;>"
                         + "Hệ thống cho rằng bệnh mà người bệnh mắc phải là: " + singleResult.get("Disease")
                         + "</div>");
 
