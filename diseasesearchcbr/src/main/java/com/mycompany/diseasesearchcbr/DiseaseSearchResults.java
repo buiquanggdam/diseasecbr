@@ -164,7 +164,6 @@ public class DiseaseSearchResults extends HttpServlet {
             out.println("<head>");
             out.println("<title>Kết quả chẩn đoán</title>");
             out.println("<link href='style.css' rel='stylesheet' type='text/css' />");
-            out.println("<link href='iconfont.css' rel='stylesheet' type='text/css' />");
             out.println("</head>");
             out.println("<body>");
             out.println(

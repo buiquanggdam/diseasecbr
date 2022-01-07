@@ -14,31 +14,8 @@ output, ruby, section, summary, time, mark, audio, video {
     vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup,
-menu, nav, section {
-    display: block;
-}
-
 body {
     line-height: 1;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
 }
 
 /* custom styles */
@@ -66,10 +43,6 @@ body>form {
     margin-bottom: 60px;
 }
 
-strong {
-    font-weight: 600;
-}
-
 h1 {
     font-weight: 400;
     font-size: 25px;
@@ -78,14 +51,6 @@ h1 {
     color: rgb(20, 100, 200);
     font-style: italic;
     border-top: 1px solid #e3e3e3;
-}
-
-a {
-    color: rgb(20, 100, 200);
-}
-
-a:hover, a:active {
-    text-decoration: none;
 }
 
 .query fieldset {
@@ -153,30 +118,6 @@ h3#new-query {
     margin-left: 10px;
 }
 
-.inputfield input[type="text"] {
-    width: 70%;
-    border: 1px solid rgb(190, 190, 190);
-    padding: 2px 5px;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 3px;
-}
-
-.inputfield input[type="text"]:hover, .inputfield input[type="text"]:focus
-{
-    border-color: rgb(20, 100, 200);
-    outline: none;
-}
-
-select {
-    border: 1px solid rgb(190, 190, 190);
-    font-family: 'Roboto', 'PT Sans', Arial, sans-serif;
-    font-size: 11px;
-    background: #fff;
-    padding: 1px 6px 2px;
-    -webkit-font-smoothing: antialiased;
-    outline: none;
-}
-
 button {
     float: right;
     outline: none;
@@ -231,7 +172,6 @@ h1+p.text {
 }
 
 #search-results {
-
     width: 100%;
     float: left;
     display: block;
@@ -239,80 +179,12 @@ h1+p.text {
     padding: 0;
 }
 
-.single-result {
-    width: 96%;
-    float: left;
-    display: block;
-    margin-top: 30px;
-    border: 1px solid #e3e3e3;
-    padding: 2% 2% 0 2%;
-}
 
 .result {
     margin-bottom: 20px;
     font-size: 24px;
 }
 
-.single-result-table {
-    width: 100%;
-    float: left;
-    display: block;
-}
-
-tr.td {
-    display: inline-block;
-    width: 50%;
-    margin-bottom: 5px;
-}
-
-td {
-    display: inline-block;
-    width: 50%;
-}
-
-tr.buttons {
-    width: 100%;
-    margin-top: 15px;
-    display: inline-block;
-    border-top: 1px solid #e3e3e3;
-    padding: 5px 0;
-}
-
-.buttons td {
-    width: 33.3%;
-    vertical-align: middle;
-}
-
-tr.disease-name td:last-child {
-    vertical-align: top;
-    padding-top: 30px;
-    margin-left: -20px;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-span.icon-camera {
-    float: right;
-    margin: 0 36px 19px 0;
-}
-
-.input-model {
-    display: none;
-}
-
-div#example-results {
-    float: right;
-    width: 70%;
-    display: block;
-    border-left: 1px solid #e3e3e3;
-    padding-left: 4%;
-    margin-top: 20px;
-}
-
-div#example-results+p {
-    margin-top: 15px;
-}
 
 h2 {
     font-size: 19px;
@@ -344,14 +216,4 @@ h4.prod:first-of-type, h4.shop:first-of-type {
     border-top: 1px solid #e3e3e3;
     padding-bottom: 7px;
     width: 25%;
-}
-
-.icon-search:before, .icon-data:before {
-    margin-left: 80px;
-    margin-top: 11px;
-    display: inline-block;
-}
-
-[class^="icon-"]:before, [class*=" icon-"]:before {
-    font-size: 67px;
 }
