@@ -238,24 +238,57 @@ public class DiseaseSearchResults extends HttpServlet {
                             + "        Lời khuyên : Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu.\n"
                             + "    </div>");
                 } else if (tenbenh.equals("Hội trứng Tourette")) {
-                    out.println("");
-                    
+                    out.println("<div class='disease-des'>\n"
+                            + "        Hội trứng Tourette là một chứng rối loạn liên quan đến các chuyển động \n"
+                            + "        lặp đi lặp lại hoặc âm thanh không mong muốn (tics) không thể dễ dàng kiểm soát được. \n"
+                            + "        Ví dụ, bạn có thể liên tục chớp mắt, nhún vai hoặc thốt ra những âm thanh bất thường hoặc \n"
+                            + "        những từ xúc phạm. Tics thường xuất hiện trong độ tuổi từ 2 đến 15, với độ tuổi trung bình \n"
+                            + "        là khoảng 6 tuổi. Nam giới có nguy cơ mắc hội chứng Tourette cao hơn nữ giới khoảng 3-4 lần.\n"
+                            + "    </div>\n"
+                            + "    <div style=\"font-weight: bold;\">\n"
+                            + "        Lời khuyên: Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu.\n"
+                            + "    </div>");
+
                 } else if (tenbenh.equals("Liệt dây thần kinh mặt Bell’s Palsy")) {
-                    out.println("<div><div>" + "Giới thiệu : Liệt dây thần kinh mặt Bell’s Palsy là một tình trạng gây ra tình trạng yếu tạm thời hoặc tê liệt các cơ ở mặt. Nó có thể xảy ra khi dây thần kinh điều khiển cơ mặt của bạn bị viêm, sưng hoặc bị nén. Mọi độ tuổi đều có thể mắc bệnh nên cần chú ý. "
-                            + "<div><div>" + "Lời khuyên : Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần" + "</div></div>"
-                            + "</strong></div>" + "</div>");
+                    out.println("div class='disease-des'>\n"
+                            + "        Liệt dây thần kinh mặt Bell's Palsy là một tình trạng gây ra tình trạng yếu tạm thời hoặc tê liệt các cơ ở mặt. \n"
+                            + "        Nó có thể xảy ra khi dây thần kinh điều khiển cơ mặt của bạn bị viêm, sưng hoặc bị nén. Mọi độ tuổi đều có thể \n"
+                            + "        mắc bệnh nên cần chú ý.\n"
+                            + "    </div>\n"
+                            + "    <div style=\"font-weight: bold;\">\n"
+                            + "        Lời khuyên: Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần.\n"
+                            + "    </div>");
                 } else if (tenbenh.equals("Rối loạn TIC")) {
-                    out.println("<div><div>" + "Giới thiệu : Rối loạn TIC là tình trạng co thắt không kiểm soát ở mặt như mắt nhấp nháy hoặc nhăn mũi. Chúng cũng có thể được gọi là co thắt bắt chước. Mặc dù rối loạn TIC thường tự phát, chúng có thể bị ức chế tạm thời. Rối loạn TIC có thể gặp phải ở mọi độ tuổi  "
-                            + "<div><div>" + "Lời khuyên : Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần" + "</div></div>"
-                            + "</strong></div>" + "</div>");
+                    out.println("<div class='disease-des'>\n"
+                            + "        Rối loạn TIC là tình trạng co thắt không kiểm soát ở mặt như mắt nhấp nháy hoặc nhăn mũi. \n"
+                            + "        Chúng cũng có thể được gọi là co thắt bắt chước. Mặc dù rối loạn TIC thường tự phát, \n"
+                            + "        chúng có thể bị ức chế tạm thời. Rối loạn TIC có thể gặp phải ở mọi độ tuổi.\n"
+                            + "    </div>\n"
+                            + "    <div style=\"font-weight: bold;\">\n"
+                            + "        Lời khuyên: Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần.\n"
+                            + "    </div>");
                 } else if (tenbenh.equals(" Đau dây thần kinh sinh ba")) {
-                    out.println("<div><div>" + "Giới thiệu :  Đau dây thần kinh sinh ba là một chứng bệnh hiếm gặp. Các sợi dây thần kinh cảm giác và của dây thần kinh bị tổn thương nên khi một kích thích xuất hiện sẽ hình thành nên một xung động đau. Những kích thích kéo dài, lặp lại nhiều lần tạo nên một vùng hưng phấn ở vỏ não làm người bệnh có cảm giác đau thường xuyên, liên tục và dữ dội. Đau dây thần kinh sinh ba là một chứng bệnh mãn tính, kéo dài nhiều ngày đến nhiều tháng. Các bệnh nhân thường là nhóm người cao tuổi từ 60 tuổi trở lên.  "
-                            + "<div><div>" + "Lời khuyên : Người bệnh cần kiểm tra sức khỏe định kì, tới gặp bác sĩ để chọn thuốc phù hợp, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần" + "</div></div>"
-                            + "</strong></div>" + "</div>");
+                    out.println("<div class='disease-des'>\n"
+                            + "        Đau dây thần kinh sinh ba là một chứng bệnh hiếm gặp. Các sợi dây thần kinh cảm giác và \n"
+                            + "        của dây thần kinh bị tổn thương nên khi một kích thích xuất hiện sẽ hình thành nên một xung động đau. \n"
+                            + "        Những kích thích kéo dài, lặp lại nhiều lần tạo nên một vùng hưng phấn ở vỏ não làm người bệnh có cảm giác \n"
+                            + "        đau thường xuyên, liên tục và dữ dội. Đau dây thần kinh sinh ba là một chứng bệnh mãn tính, kéo dài \n"
+                            + "        nhiều ngày đến nhiều tháng. Các bệnh nhân thường là nhóm người cao tuổi từ 60 tuổi trở lên.\n"
+                            + "    </div>\n"
+                            + "    <div style=\"font-weight: bold;\">\n"
+                            + "        Lời khuyên: Người bệnh cần thông báo tình trạng bản thân trước với mọi người, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần.\n"
+                            + "    </div>");
                 } else if (tenbenh.equals("Đột quỵ")) {
-                    out.println("<div><div>" + "Giới thiệu : Đột quỵ xảy ra khi nguồn cung cấp máu đến một phần não của bạn bị gián đoạn hoặc giảm, ngăn cản các mô não nhận được oxy và chất dinh dưỡng. Tế bào não bắt đầu chết trong vài phút. Đột quỵ là một trường hợp cấp cứu y tế và điều trị kịp thời là rất quan trọng. Hành động sớm có thể làm giảm tổn thương não và các biến chứng khác. Bệnh đột quỵ xuất hiện ở mọi độ tuổi nên mọi người cần chú ý."
-                            + "<div><div>" + "Lời khuyên : Người bệnh cần kiểm tra sức khỏe định kì, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần" + "</div></div>"
-                            + "</strong></div>" + "</div>");
+                    out.println("<div class='disease-des'>\n"
+                            + "        Đột quỵ xảy ra khi nguồn cung cấp máu đến một phần não của bạn bị gián đoạn hoặc giảm, \n"
+                            + "        ngăn cản các mô não nhận được oxy và chất dinh dưỡng. Tế bào não bắt đầu chết trong vài phút. \n"
+                            + "        Đột quỵ là một trường hợp cấp cứu y tế và điều trị kịp thời là rất quan trọng. \n"
+                            + "        Hành động sớm có thể làm giảm tổn thương não và các biến chứng khác. Bệnh đột quỵ xuất hiện ở \n"
+                            + "        mọi độ tuổi nên mọi người cần chú ý.\n"
+                            + "    </div>\n"
+                            + "    <div style=\"font-weight: bold;\">\n"
+                            + "        Lời khuyên: Người bệnh cần kiểm tra sức khỏe định kì, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần.\n"
+                            + "    </div>");
                 }
             });
             out.println("</div>");
