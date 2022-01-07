@@ -11,12 +11,12 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <div id='nav'><p>Case-based Reasoning <span class='page-title'>/ Start</span></p></div>
-        <h1>Welcome to DiseaseSearchCBR!</h1>
+        <div id='nav'><p>Nhóm 21 <span class='page-title' style='line-height: 1.5;'>/ Các hệ thống dựa trên tri thức</span></p></div>
+        <h1>Hệ thống phán đoán tình trạng sức khoẻ dựa trên phản xạ khuôn mặt.</h1>
         <p class="text"> 
             Hệ thống phán đoán tình trạng sức khoẻ dựa trên phản xạ khuôn mặt.<br/><br/>
-            Hệ thống sử dụng một kỹ thuật truy xuất hiện đại được gọi là <a href="https://en.wikipedia.org/wiki/Case-based_reasoning">Case-based reasoning</a> để kết hợp các lựa chọn<br/>với một loại cơ sở dữ liệu đặc biệt. 
-            <br/><br/>Công cụ này được xây dựng với framework <a href="http://www.mycbr-project.net/">myCBR</a> và các thư viện mã nguồn mở khác.
+            Hệ thống sử dụng giải thuật <a href="https://en.wikipedia.org/wiki/Case-based_reasoning">Case-based reasoning</a> để đưa ra chẩn đoán về tình trạng sức khoẻ thông qua các dữ liệu <br/> đầu vào là các phản xạ ở trên khuôn mặt. 
+            <br/><br/>
         </p>
         
         <div class="link">

@@ -38,7 +38,7 @@ public class DiseaseSearchQuery extends HttpServlet{
             out.println("</head>");
             out.println("<body>");
             out.println(
-                    "<div id='nav'><h1><span class='page-title'>Trả lời các câu hỏi sau để hệ thống phán đoán về tình trạng sức khoẻ</span></h1></div>");
+                    "<div id='nav'><h1><span class='page-title' style='line-height:3vh;'>Trả lời các câu hỏi sau để hệ thống đưa ra phán đoán về tình trạng sức khoẻ</span></h1></div>");
             out.println(""
                     + "    <form method='POST' action='DiseaseSearchResults' name='queryForm'>\n"
                     + "        <div class='query'>\n"
