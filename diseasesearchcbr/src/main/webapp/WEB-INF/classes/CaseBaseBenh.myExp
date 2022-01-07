@@ -4,11 +4,11 @@
   <desc>
               </desc>
 </exp>
-<exp obj="Tongue" c="Benh" type="AttributeDesc" >
+<exp obj="CaseBaseBenh" type="Concept" >
   <desc>
-              </desc>
+  </desc>
 </exp>
-<exp obj="Speak" c="Benh" type="AttributeDesc" >
+<exp obj="Jaw" c="Benh" type="AttributeDesc" >
   <desc>
               </desc>
 </exp>
@@ -16,7 +16,11 @@
   <desc>
               </desc>
 </exp>
-<exp obj="Jaw" c="Benh" type="AttributeDesc" >
+<exp obj="Mouth" c="Benh" type="AttributeDesc" >
+  <desc>
+              </desc>
+</exp>
+<exp obj="Speak" c="Benh" type="AttributeDesc" >
   <desc>
               </desc>
 </exp>
@@ -28,12 +32,20 @@
   <desc>
           </desc>
 </exp>
+<exp obj="Tongue" c="Benh" type="AttributeDesc" >
+  <desc>
+              </desc>
+</exp>
 <exp obj="Face" c="Benh" type="AttributeDesc" >
   <desc>
               </desc>
 </exp>
-<exp obj="Mouth" c="Benh" type="AttributeDesc" >
+<exp obj="TON2" c="Benh" desc="Tongue" type="SimpleAttribute" >
   <desc>
-              </desc>
+  </desc>
+</exp>
+<exp obj="Li&#7879;t d&#226;y th&#7847;n kinh m&#7863;t Bell&#8217;s Palsy" c="Benh" desc="Disease" type="SimpleAttribute" >
+  <desc>
+  </desc>
 </exp>
 </Project>
