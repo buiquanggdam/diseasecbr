@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class DiseaseSearchQuery extends HttpServlet{
 
-    private static final long serialVersionUID = 4564048408781536527L;
+    private static final long serialVersionUID = 22L;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
