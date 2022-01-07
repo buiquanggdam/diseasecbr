@@ -15,6 +15,7 @@ import de.dfki.mycbr.core.similarity.Similarity;
 import de.dfki.mycbr.util.Pair;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -62,6 +63,7 @@ public class DiseaseSearchResults extends HttpServlet {
         SymbolDesc jaw = (SymbolDesc) concept.getAllAttributeDescs().get("Jaw");
         SymbolDesc age = (SymbolDesc) concept.getAllAttributeDescs().get("Age");
         SymbolDesc speak = (SymbolDesc) concept.getAllAttributeDescs().get("Speak");
+        SymbolDesc disease = (SymbolDesc) concept.getAllAttributeDescs().get("Disease");
 
         // Retrieval initialisieren und Methode (sortiert absteigend nach Ähnlichkeit) festlegen
         Retrieval disRetrieval = new Retrieval(concept, defaultCB);
@@ -81,15 +83,10 @@ public class DiseaseSearchResults extends HttpServlet {
             Logger.getLogger(DiseaseSearchResults.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-//        camRetrieval.start();
         disRetrieval.start();
         // Get the results
         List<Pair<Instance, Similarity>> resultList = disRetrieval.getResult();
-//        String disease = null;
-//        
-//        queryInstance.addAttribute(disease, queryInstance);
 
-//        defaultCB.addCase(queryInstance);
         for (int i = 0; i < resultList.size(); i++) {
             System.out.println(resultList.get(i).toString());
         }
@@ -101,6 +98,7 @@ public class DiseaseSearchResults extends HttpServlet {
             for (int i = 0; i < casesCount; i++) {
                 resultTable.add(getAttributes(resultList.get(i), prj.getConceptByID(CBRInit.getConceptName())));
                 System.out.println("liste " + resultTable.get(i).toString());
+                System.out.println("tên bệnh: " + resultTable.get(i).get("Disease"));
             }
         } else {
             resultTable = null;
@@ -176,7 +174,7 @@ public class DiseaseSearchResults extends HttpServlet {
                 request.getParameter("speak"));
 
         // Ergebnisse ausgeben
-        try (PrintWriter out = response.getWriter()) {
+        try ( PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -201,14 +199,12 @@ public class DiseaseSearchResults extends HttpServlet {
                 out.println("<div class = 'result'>"
                         + "Bệnh mà người bệnh mắc phải là: " + singleResult.get("Disease") + "</div>");
 
-                Enumeration<String> items = singleResult.keys();
-
                 // Đầu ra giới thiệu và lời khuyên
                 String tenbenh = singleResult.get("Disease");
                 if (tenbenh.equals("Rối loạn vận động chậm phát (Tardive dyskinesia)")) {
                     out.println("<div><div>" + "Giới thiệu : Các rối loạn vận động chậm phát (TDs) là những chuyển động không kiểm soát được của lưỡi môi, mặt, thân và các chi. Bệnh thường xảy ra ở những người đang dùng các thuốc kháng acid dopaminergic dài hạn. Bệnh nhân tâm thần phân liệt, rối loạn tâm thần phân liệt, rối loạn lưỡng cực đã được điều trị bằng thuốc chống loạn thần trong thời gian dài thường mắt phải các chứng rối loạn vận động chậm, nhưng bệnh này có thể xuất hiện ở những bệnh nhân khác. Tình trạng sức khoẻ này rất phổ biến, bệnh có thể ảnh thướng đến bệnh nhân ở mọi lứa tuổi. "
                             + "  <strong>"
-                            + "<div><div>" + "Lời khuyên : Người bệnh cần ăn uống điều độ, tăng cường tập thể dục, cố gắng không để bệnh ảnh hưởng đến cuộc sống thường ngày "+ "</div></div>"
+                            + "<div><div>" + "Lời khuyên : Người bệnh cần ăn uống điều độ, tăng cường tập thể dục, cố gắng không để bệnh ảnh hưởng đến cuộc sống thường ngày " + "</div></div>"
                             + "</strong></div>" + "</div>");
                 } else if (tenbenh.equals("Bình thường (không có bệnh)")) {
                     out.println("<div><div>" + "Giới thiệu : Người bệnh bình thường) <strong>"
@@ -243,11 +239,11 @@ public class DiseaseSearchResults extends HttpServlet {
                     out.println("<div><div>" + "Giới thiệu :  Đau dây thần kinh sinh ba là một chứng bệnh hiếm gặp. Các sợi dây thần kinh cảm giác và của dây thần kinh bị tổn thương nên khi một kích thích xuất hiện sẽ hình thành nên một xung động đau. Những kích thích kéo dài, lặp lại nhiều lần tạo nên một vùng hưng phấn ở vỏ não làm người bệnh có cảm giác đau thường xuyên, liên tục và dữ dội. Đau dây thần kinh sinh ba là một chứng bệnh mãn tính, kéo dài nhiều ngày đến nhiều tháng. Các bệnh nhân thường là nhóm người cao tuổi từ 60 tuổi trở lên.  "
                             + "<div><div>" + "Lời khuyên : Người bệnh cần kiểm tra sức khỏe định kì, tới gặp bác sĩ để chọn thuốc phù hợp, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần" + "</div></div>"
                             + "</strong></div>" + "</div>");
-                    }else if (tenbenh.equals("Đột quỵ")) {
+                } else if (tenbenh.equals("Đột quỵ")) {
                     out.println("<div><div>" + "Giới thiệu : Đột quỵ xảy ra khi nguồn cung cấp máu đến một phần não của bạn bị gián đoạn hoặc giảm, ngăn cản các mô não nhận được oxy và chất dinh dưỡng. Tế bào não bắt đầu chết trong vài phút. Đột quỵ là một trường hợp cấp cứu y tế và điều trị kịp thời là rất quan trọng. Hành động sớm có thể làm giảm tổn thương não và các biến chứng khác. Bệnh đột quỵ xuất hiện ở mọi độ tuổi nên mọi người cần chú ý."
                             + "<div><div>" + "Lời khuyên : Người bệnh cần kiểm tra sức khỏe định kì, tập thể dục thường xuyên, ăn uống điều độ, hạn chế hút thuốc, uống rượu, gặp bác sĩ tâm lý nếu cần" + "</div></div>"
                             + "</strong></div>" + "</div>");
-                    }
+                }
             });
             out.println("</div>");
             out.println("</body>");
