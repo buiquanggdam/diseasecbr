@@ -15,6 +15,7 @@ import de.dfki.mycbr.core.similarity.Similarity;
 import de.dfki.mycbr.util.Pair;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
@@ -102,6 +103,58 @@ public class DiseaseSearchResults extends HttpServlet {
         }
 
         return resultTable;
+//        Tính toán độ tương đồng
+//        disRetrieval.start();
+
+////      Lấy kết quả sau khi tính toán độ tương đồng so với các case mẫu
+//        List<Pair<Instance, Similarity>> resultList = disRetrieval.getResult();
+//        resultList.get(0).getFirst().getName();
+//
+//        for (int i = 0; i < resultList.size(); i++) {
+//            System.out.println(resultList.get(i).toString());
+//        }
+//        // Thêm case mới vào cases-base
+//        ArrayList<Hashtable<String, String>> resultTable;
+//        if (resultList.size() > 0) {
+//            resultTable = new ArrayList<>();
+//
+//            resultTable.add(getAttributes(resultList.get(0), prj.getConceptByID(CBRInit.getConceptName())));
+//            System.out.println("liste " + resultTable.get(0).toString());
+//            String newName = "Benh #" + String.valueOf(prj.getCurrentNumberOfCases());
+//            try {
+//                Instance newInstance = concept.addInstance(newName);
+//                newInstance.addAttribute(face, face.getAttribute(face1));
+//                newInstance.addAttribute(eye, eye.getAttribute(eyes1));
+//                newInstance.addAttribute(mouth, mouth.getAttribute(mouth1));
+//                newInstance.addAttribute(tongue, tongue.getAttribute(tongue1));
+//                newInstance.addAttribute(jaw, jaw.getAttribute(jaw1));
+//                newInstance.addAttribute(age, age.getAttribute(age1));
+//                newInstance.addAttribute(speak, speak.getAttribute(speak1));
+//                newInstance.addAttribute(disease, resultTable.get(0).get("Disease"));
+//                defaultCB.addCase(newInstance);
+//                prj.save();
+//
+//            } catch (Exception ex) {
+//                Logger.getLogger(DiseaseSearchResults.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//
+//            resultList.get(0).getFirst().getName();
+//            System.out.println("Test" + resultTable.get(0).get("Disease"));
+//
+//            try {
+//                queryInstance.addAttribute(disease, resultTable.get(0).get("Disease"));
+//
+//                defaultCB.addCase(queryInstance);
+//                System.out.println("Check" + prj.getCurrentNumberOfCases());
+//            } catch (ParseException ex) {
+//                Logger.getLogger(DiseaseSearchResults.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//
+//        } else {
+//            resultTable = null;
+//        }
+//
+//        return resultTable;
     }
 
 //    Hashtable chứa tên các Thuộc tính của các case
