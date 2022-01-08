@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Quang Đảm
  */
-public class DiseaseSearchQuery extends HttpServlet{
+public class DiseaseSearchQuery extends HttpServlet {
 
     private static final long serialVersionUID = 22L;
 
@@ -26,8 +26,7 @@ public class DiseaseSearchQuery extends HttpServlet{
      * @param response servlet response
      * @throws IOException if an I/O error occurs
      */
-    private void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
+    private void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
@@ -44,64 +43,64 @@ public class DiseaseSearchQuery extends HttpServlet{
                     + "        <div class='query'>\n"
                     + "            <div class='inputfield'>\n"
                     + "                <label for='face'>Trên toàn bộ khuôn mặt người bệnh có biểu hiện như thế nào?</label>\n"
-                    + "                <input type='radio' name='face' value='FAC1' checked='checked'> Nhăn nhó <br>\n"
+                    + "                <input type='radio' name='face' value='FAC7' checked='checked'> Bình thường <br>\n"
+                    + "                <input type='radio' name='face' value='FAC1'> Nhăn nhó <br>\n"
                     + "                <input type='radio' name='face' value='FAC2'> Co giật nửa mặt <br>\n"
                     + "                <input type='radio' name='face' value='FAC3'> Co giật <br>\n"
                     + "                <input type='radio' name='face' value='FAC4'> Liệt nửa mặt <br>\n"
                     + "                <input type='radio' name='face' value='FAC5'> Liệt cả mặt <br>\n"
                     + "                <input type='radio' name='face' value='FAC6'> Đau nửa mặt <br>\n"
-                    + "                <input type='radio' name='face' value='FAC7'> Bình thường <br>\n"
                     + "            </div>\n"
                     + "            <div class='inputfield'>\n"
                     + "                <label for='eyes'>Mắt của người bệnh có những biểu hiện như thế nào?</label>\n"
-                    + "                <input type='radio' name='eyes' value='EYE1' checked='checked'> Chớp mắt nhanh <br>\n"
+                    + "                <input type='radio' name='eyes' value='EYE7' checked='checked'> Bình thường <br>\n"
+                    + "                <input type='radio' name='eyes' value='EYE1'> Chớp mắt nhanh <br>\n"
                     + "                <input type='radio' name='eyes' value='EYE2'> Co giật <br>\n"
                     + "                <input type='radio' name='eyes' value='EYE3'> Khô mắt <br>\n"
                     + "                <input type='radio' name='eyes' value='EYE4'> Mí mắt xệ xuống <br>\n"
                     + "                <input type='radio' name='eyes' value='EYE5'> Chảy nước mắt quá nhiều ở một bên <br>\n"
                     + "                <input type='radio' name='eyes' value='EYE6'> Mất thị lực <br>\n"
-                    + "                <input type='radio' name='eyes' value='EYE7'> Bình thường <br>\n"
                     + "            </div>\n"
                     + "            <div class='inputfield'>\n"
                     + "                <label for='mouth'>Miệng của người bệnh có những biểu hiện như thế nào?</label> <br>\n"
-                    + "                <input type='radio' name='mouth' value='MOU1' checked='checked'> Môi mím lại <br>\n"
+                    + "                <input type='radio' name='mouth' value='MOU8' checked='checked'> Bình thường <br>\n"
+                    + "                <input type='radio' name='mouth' value='MOU1'> Môi mím lại <br>\n"
                     + "                <input type='radio' name='mouth' value='MOU2'> Co giật <br>\n"
                     + "                <input type='radio' name='mouth' value='MOU3'> Trề môi <br>\n"
                     + "                <input type='radio' name='mouth' value='MOU4'> Giật khoé miệng <br>\n"
                     + "                <input type='radio' name='mouth' value='MOU5'> Đau <br>\n"
                     + "                <input type='radio' name='mouth' value='MOU6'> Méo miệng <br>\n"
                     + "                <input type='radio' name='mouth' value='MOU7'> Nhỏ dãi <br>\n"
-                    + "                <input type='radio' name='mouth' value='MOU8'> Bình thường <br>\n"
                     + "            </div>\n"
                     + "            <div class='inputfield'>\n"
                     + "                <label for='tongue'>Lưỡi của người bệnh có những biểu hiện như thế nào?</label> <br>\n"
-                    + "                <input type='radio' name='tongue' value='TON1' checked='checked'> Lè lưỡi <br>\n"
+                    + "                <input type='radio' name='tongue' value='TON5' checked='checked'> Bình thường <br>\n"
+                    + "                <input type='radio' name='tongue' value='TON1'> Lè lưỡi <br>\n"
                     + "                <input type='radio' name='tongue' value='TON2'> Mất vị giác <br>\n"
                     + "                <input type='radio' name='tongue' value='TON3'> Đau <br>\n"
                     + "                <input type='radio' name='tongue' value='TON4'> Cơ lưỡi tự di chuyển <br>\n"
-                    + "                <input type='radio' name='tongue' value='TON5'> Bình thường <br>\n"
                     + "            </div>\n"
                     + "            <div class='inputfield'>\n"
                     + "                <label for='jaw'>Phần hàm của người bệnh có những biểu hiện như thếnào?</label>\n"
-                    + "                <input type='radio' name='jaw' value='JAW1' checked='checked'> Co giật <br>\n"
+                    + "                <input type='radio' name='jaw' value='JAW5'checked='checked'> Bình thường <br>\n"
+                    + "                <input type='radio' name='jaw' value='JAW1'> Co giật <br>\n"
                     + "                <input type='radio' name='jaw' value='JAW2'> Lệch hàm <br>\n"
                     + "                <input type='radio' name='jaw' value='JAW3'> Đau <br>\n"
                     + "                <input type='radio' name='jaw' value='JAW4'> Nhai đi nhai lại <br>\n"
-                    + "                <input type='radio' name='jaw' value='JAW5'> Bình thường <br>\n"
                     + "            </div>\n"
                     + "            <div class='inputfield'>\n"
                     + "                <label for='age'>Người bệnh đang ở độ tuổi nào?</label>\n"
-                    + "                <input type='radio' name='age' value='AGE1' checked='checked'> Từ 2 đến 15 tuổi\n"
+                    + "                <input type='radio' name='age' value='AGE1'> Từ 2 đến 15 tuổi\n"
                     + "                <input type='radio' name='age' value='AGE2'> Từ 16 đến 40 tuổi\n"
                     + "                <input type='radio' name='age' value='AGE3'> Từ 41 đến 60 tuổi\n"
                     + "                <input type='radio' name='age' value='AGE4'> Trên 61 tuổi\n"
-                    + "                <input type='radio' name='age' value='AGE5'> Không xác định\n"
+                    + "                <input type='radio' name='age' value='AGE5' checked='checked'> Không xác định\n"
                     + "            </div>\n"
                     + "            <div class='inputfield'>\n"
                     + "                <label for='speak'>Khả năng giao tiếp của người bệnh như thế nào?</label>\n"
-                    + "                <input type='radio' name='speak' value='SPE1' checked='checked'> Khó nói <br>\n"
+                    + "                <input type='radio' name='speak' value='SPE3' checked='checked'> Bình thường <br>\n"
+                    + "                <input type='radio' name='speak' value='SPE1'> Khó nói <br>\n"
                     + "                <input type='radio' name='speak' value='SPE2'> Lặp đi lặp lại các từ <br>\n"
-                    + "                <input type='radio' name='speak' value='SPE3'> Bình thường <br>\n"
                     + "            </div>\n"
                     + "            </fieldset>\n"
                     + "            <fieldset id='imaging'>\n"
