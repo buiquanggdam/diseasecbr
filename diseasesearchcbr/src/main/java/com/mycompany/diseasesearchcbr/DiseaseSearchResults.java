@@ -235,7 +235,9 @@ public class DiseaseSearchResults extends HttpServlet {
                 out.println("<div class = 'result'style:'line-height:5vh;>"
                         + "Hệ thống cho rằng bệnh mà người bệnh mắc phải là: " + singleResult.get("Disease")
                         + "</div>");
-
+                out.println("<div>"
+                        + "Độ tương đồng: " + singleResult.get("Sim")
+                        + "</div>");
                 // Đầu ra giới thiệu và lời khuyên
                 String diseaseName = singleResult.get("Disease");
                 if (diseaseName.equals("Rối loạn vận động chậm phát (Tardive dyskinesia)")) {
